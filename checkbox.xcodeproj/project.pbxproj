@@ -12,6 +12,8 @@
 		CFFD508822F1B18900DF9D5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFFD508622F1B18900DF9D5A /* Main.storyboard */; };
 		CFFD508A22F1B18A00DF9D5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFFD508922F1B18A00DF9D5A /* Assets.xcassets */; };
 		CFFD508D22F1B18A00DF9D5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFFD508B22F1B18A00DF9D5A /* LaunchScreen.storyboard */; };
+		CFFD509522F1B92C00DF9D5A /* CheckBoxClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFD509422F1B92C00DF9D5A /* CheckBoxClass.swift */; };
+		CFFD509922F1CAC800DF9D5A /* RadioButtonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFD509822F1CAC800DF9D5A /* RadioButtonClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		CFFD508922F1B18A00DF9D5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFFD508C22F1B18A00DF9D5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CFFD508E22F1B18A00DF9D5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFFD509422F1B92C00DF9D5A /* CheckBoxClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxClass.swift; sourceTree = "<group>"; };
+		CFFD509822F1CAC800DF9D5A /* RadioButtonClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				CFFD508922F1B18A00DF9D5A /* Assets.xcassets */,
 				CFFD508B22F1B18A00DF9D5A /* LaunchScreen.storyboard */,
 				CFFD508E22F1B18A00DF9D5A /* Info.plist */,
+				CFFD509422F1B92C00DF9D5A /* CheckBoxClass.swift */,
+				CFFD509822F1CAC800DF9D5A /* RadioButtonClass.swift */,
 			);
 			path = checkbox;
 			sourceTree = "<group>";
@@ -137,6 +143,8 @@
 			files = (
 				CFFD508522F1B18900DF9D5A /* ViewController.swift in Sources */,
 				CFFD508322F1B18900DF9D5A /* AppDelegate.swift in Sources */,
+				CFFD509922F1CAC800DF9D5A /* RadioButtonClass.swift in Sources */,
+				CFFD509522F1B92C00DF9D5A /* CheckBoxClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

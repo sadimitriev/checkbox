@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,13 +13,55 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="checkbox" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rmm-jH-fjS" customClass="CheckBox" customModule="checkbox" customModuleProvider="target">
+                                <rect key="frame" x="16" y="36" width="60" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="bPI-UY-ByK"/>
+                                    <constraint firstAttribute="height" constant="30" id="kQN-JT-oPb"/>
+                                </constraints>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zJW-aa-uwX">
+                                <rect key="frame" x="16" y="82" width="343" height="322"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYv-5A-dEb" customClass="RadioButton" customModule="checkbox" customModuleProvider="target">
+                                        <rect key="frame" x="35" y="0.0" width="56" height="30"/>
+                                        <state key="normal" title="Первый"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0NP-sr-VKC" customClass="RadioButton" customModule="checkbox" customModuleProvider="target">
+                                        <rect key="frame" x="35" y="46" width="52" height="30"/>
+                                        <state key="normal" title="Второй"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="0NP-sr-VKC" firstAttribute="top" secondItem="lYv-5A-dEb" secondAttribute="bottom" constant="16" id="1gM-UM-MKB"/>
+                                    <constraint firstItem="0NP-sr-VKC" firstAttribute="leading" secondItem="zJW-aa-uwX" secondAttribute="leading" constant="35" id="ayR-t2-n4V"/>
+                                    <constraint firstItem="lYv-5A-dEb" firstAttribute="leading" secondItem="zJW-aa-uwX" secondAttribute="leading" constant="35" id="mbx-wx-mrS"/>
+                                    <constraint firstItem="lYv-5A-dEb" firstAttribute="top" secondItem="zJW-aa-uwX" secondAttribute="top" id="szZ-0f-XOq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Rmm-jH-fjS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="098-ny-DEd"/>
+                            <constraint firstItem="Rmm-jH-fjS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="DMX-9e-JDN"/>
+                            <constraint firstItem="zJW-aa-uwX" firstAttribute="top" secondItem="Rmm-jH-fjS" secondAttribute="bottom" constant="16" id="Ye2-C0-hks"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zJW-aa-uwX" secondAttribute="trailing" constant="16" id="aho-O8-6Gp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zJW-aa-uwX" secondAttribute="bottom" constant="263" id="fxc-qg-TK3"/>
+                            <constraint firstItem="zJW-aa-uwX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="wwb-1Y-Ewu"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="firstButton" destination="lYv-5A-dEb" id="yZB-Uo-nMG"/>
+                        <outlet property="secondButton" destination="0NP-sr-VKC" id="HRQ-9K-1Vq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

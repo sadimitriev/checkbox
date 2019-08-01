@@ -9,12 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var firstButton: RadioButton!
+    @IBOutlet weak var secondButton: RadioButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        firstButton?.alternateButton = [secondButton!]
+        secondButton?.alternateButton = [firstButton!]
     }
-
-
+    
+    override func awakeFromNib() {
+        self.view.layoutIfNeeded()
+        firstButton.isSelected = true
+        secondButton.isSelected = false
+    }
 }
-
